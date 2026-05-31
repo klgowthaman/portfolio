@@ -35,7 +35,7 @@ export default function Footer() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
               <img src="/assets/logo.png" alt="Justry Tech" style={{ height: '36px', width: '36px', objectFit: 'cover', borderRadius: '50%' }} />
-              <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <div style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.1rem', color: 'var(--text-primary)' }}>
                 Justry Tech Solutions
               </div>
             </div>
@@ -49,8 +49,8 @@ export default function Footer() {
                 { icon: <InstagramIcon size={18} />, href: 'https://www.instagram.com/justry_tech_solutions?igsh=bTFubHcxMnY5aWV4&utm_source=qr' },
               ].map((s, i) => (
                 <motion.a key={i} href={s.href} target="_blank" rel="noopener noreferrer"
-                  whileHover={{ background: 'rgba(108,99,255,0.2)', color: 'var(--text-primary)', scale: 1.05 }}
-                  style={{ width: '42px', height: '42px', borderRadius: '0.75rem', background: 'rgba(108,99,255,0.08)', border: '1px solid rgba(108,99,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#6c63ff', textDecoration: 'none', transition: 'all 0.1s ease' }}
+                  whileHover={{ background: 'var(--text-primary)', color: 'var(--bg-primary)', scale: 1.05 }}
+                  style={{ width: '42px', height: '42px', borderRadius: '0.75rem', background: 'var(--border-color)', border: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-primary)', textDecoration: 'none', transition: 'all 0.1s ease' }}
                 >
                   {s.icon}
                 </motion.a>
@@ -64,7 +64,7 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               {quickLinks.map((link, i) => (
                 <motion.button key={i} onClick={() => scrollTo(link)}
-                  whileHover={{ color: '#6c63ff' }}
+                  whileHover={{ color: 'var(--text-primary)' }}
                   style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)', fontSize: '0.875rem', textAlign: 'left', padding: 0, transition: 'color 0.1s' }}
                 >
                   {link}
@@ -94,21 +94,21 @@ export default function Footer() {
               <ArrowUpRight size={14} /> Start a Project
             </button>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.75rem' }}>
-              <Mail size={15} color="#6c63ff" />
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=justrytechsolutions@gmail.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.78rem', textDecoration: 'none', transition: 'color 0.1s' }} onMouseEnter={e => e.target.style.color = '#6c63ff'} onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}>justrytechsolutions@gmail.com</a>
+              <Mail size={15} color="var(--text-primary)" />
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=justrytechsolutions@gmail.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-secondary)', fontSize: '0.78rem', textDecoration: 'none', transition: 'color 0.1s' }} onMouseEnter={e => e.target.style.color = 'var(--text-primary)'} onMouseLeave={e => e.target.style.color = 'var(--text-secondary)'}>justrytechsolutions@gmail.com</a>
             </div>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid rgba(108,99,255,0.1)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <p style={{ color: 'var(--text-secondary)', opacity: 0.6, fontSize: '0.8rem' }}>
             © {year} Justry Tech Solutions. All Rights Reserved.
           </p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {['Privacy Policy', 'Terms of Service'].map((link, i) => (
               <motion.a key={i} href="#" style={{ color: 'var(--text-secondary)', opacity: 0.6, fontSize: '0.8rem', textDecoration: 'none', transition: 'all 0.1s' }}
-                whileHover={{ color: '#6c63ff', opacity: 1 }}
+                whileHover={{ color: 'var(--text-primary)', opacity: 1 }}
               >
                 {link}
               </motion.a>
