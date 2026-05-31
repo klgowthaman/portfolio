@@ -28,10 +28,10 @@ html {
   --bg-secondary: #f9f9ff;
   --text-primary: #1e1b4b;
   --text-secondary: rgba(30,27,75,0.5);
-  --border-color: rgba(108,99,255,0.1);
+  --border-color: rgba(0, 0, 0, 0.08);
   --grid-color: rgba(108, 99, 255, 0.35); /* Increased for better visibility */
-  --card-bg: #ffffff;
-  --glass-bg: rgba(255, 255, 255, 0.7);
+  --card-bg: rgba(255, 255, 255, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.3);
 }
 
 .dark {
@@ -39,10 +39,10 @@ html {
   --bg-secondary: #16181d;
   --text-primary: #f8fafc;
   --text-secondary: rgba(248,250,252,0.6);
-  --border-color: rgba(255,255,255,0.08);
+  --border-color: rgba(255,255,255,0.1);
   --grid-color: rgba(108, 99, 255, 0.1);
-  --card-bg: #1c1e24;
-  --glass-bg: rgba(22, 24, 29, 0.8);
+  --card-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -55,17 +55,11 @@ body {
 
 /* Glassmorphism */
 .glass {
-  background: rgba(0, 0, 0, 0.03);
+  background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.dark .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
 }
 
 /* Gradient text */

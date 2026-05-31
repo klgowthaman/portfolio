@@ -71,11 +71,13 @@ export default function Services() {
                 whileHover={{ y: -8, boxShadow: `0 15px 35px ${svc.color}15` }}
                 style={{
                   padding: '2rem', borderRadius: '1.25rem', cursor: 'default',
-                  background: 'var(--card-bg)',
+                  background: 'var(--glass-bg)',
                   border: '1px solid var(--border-color)',
-                  backdropFilter: 'blur(10px)',
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
                   transition: 'all 0.1s ease',
-                  position: 'relative', overflow: 'hidden'
+                  position: 'relative', overflow: 'hidden',
+                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)'
                 }}
               >
               {/* Color top accent */}

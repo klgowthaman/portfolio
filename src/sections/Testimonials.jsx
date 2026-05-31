@@ -49,12 +49,14 @@ export default function Testimonials() {
             transition={{ duration: 0.4 }}
             style={{
               padding: '3rem 2.5rem', borderRadius: '1.5rem',
-              background: 'var(--card-bg)',
+              background: 'var(--glass-bg)',
               border: '1px solid var(--border-color)',
-              backdropFilter: 'blur(15px)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
               textAlign: 'center',
-              boxShadow: '0 4px 24px rgba(108,99,255,0.07)',
-              color: 'var(--text-primary)'
+              boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)',
+              color: 'var(--text-primary)',
+              transition: 'all 0.1s ease'
             }}
           >
             {/* Stars */}

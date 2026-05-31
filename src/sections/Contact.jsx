@@ -102,7 +102,7 @@ export default function Contact() {
               { icon: <InstagramIcon size={20} color="#e4405f" />, label: 'Instagram', value: 'justry_tech_solutions', href: 'https://www.instagram.com/justry_tech_solutions?igsh=bTFubHcxMnY5aWV4&utm_source=qr' },
             ].map((info, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '0.875rem', background: 'rgba(108,99,255,0.08)', border: '1px solid rgba(108,99,255,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '0.875rem', background: 'var(--glass-bg)', border: '1px solid var(--border-color)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.1s ease' }}>
                   {info.icon}
                 </div>
                 <div>
@@ -141,7 +141,7 @@ export default function Contact() {
                 <p style={{ color: 'var(--text-secondary)' }}>You can now send your message from your Gmail account.</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ background: 'var(--card-bg)', border: '1px solid var(--border-color)', borderRadius: '1.5rem', padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.25rem', boxShadow: '0 4px 20px rgba(108,99,255,0.04)' }}>
+              <form onSubmit={handleSubmit} style={{ background: 'var(--glass-bg)', border: '1px solid var(--border-color)', backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)', borderRadius: '1.5rem', padding: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.25rem', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)', transition: 'all 0.1s ease' }}>
                 <div>
                   <label style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '0.5rem', fontWeight: 600 }}>Your Name</label>
                   <input value={form.name} onChange={e => { setForm({ ...form, name: e.target.value }); setErrors({ ...errors, name: '' }) }}

@@ -67,10 +67,12 @@ export default function About() {
               <motion.div key={i} variants={item.variant}
                 style={{
                   padding: '2rem', borderRadius: '1.25rem',
-                  background: 'var(--card-bg)',
+                  background: 'var(--glass-bg)',
                   border: '1px solid var(--border-color)',
-                  backdropFilter: 'blur(10px)',
-                  transition: 'all 0.1s ease'
+                  backdropFilter: 'blur(20px)',
+                  WebkitBackdropFilter: 'blur(20px)',
+                  transition: 'all 0.1s ease',
+                  boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.05)'
                 }}
               >
               <div style={{ marginBottom: '1rem', width: '52px', height: '52px', borderRadius: '0.875rem', background: 'rgba(108,99,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -95,9 +97,11 @@ export default function About() {
               <motion.div key={i} variants={fadeUp}
                 style={{
                   padding: '1.5rem', borderRadius: '1rem',
-                  background: 'var(--card-bg)',
+                  background: 'var(--glass-bg)',
                   border: '1px solid var(--border-color)',
-                  boxShadow: '0 2px 12px rgba(108,99,255,0.06)',
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  boxShadow: '0 4px 16px rgba(108,99,255,0.06)',
                   transition: 'all 0.1s ease'
                 }}
               >
