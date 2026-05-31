@@ -26,7 +26,7 @@ function StatCounter({ value, label, started }) {
   useEffect(() => { if (started) setStarted(true) }, [started, setStarted])
   return (
     <div style={{ textAlign: 'center' }}>
-      <div style={{ fontSize: '2.5rem', fontFamily: 'Poppins, sans-serif', fontWeight: 800, background: 'linear-gradient(135deg, var(--text-primary), var(--text-secondary))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+      <div style={{ fontSize: '2.5rem', fontFamily: 'Poppins, sans-serif', fontWeight: 800, color: 'var(--text-primary)' }}>
         {count}+
       </div>
       <div style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginTop: '0.25rem' }}>{label}</div>
@@ -78,7 +78,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           style={{
             display: 'inline-flex', alignItems: 'center', gap: '0.5rem',
-            background: 'rgba(128,128,128,0.08)', border: '1px solid var(--border-color)',
+            background: 'rgba(108,99,255,0.10)', border: '1px solid rgba(108,99,255,0.25)',
             borderRadius: '9999px', padding: '0.5rem 1.25rem', marginBottom: '2rem',
             fontSize: '0.875rem', color: 'var(--text-primary)', fontWeight: 500
           }}
@@ -87,6 +87,7 @@ export default function Hero() {
           Smart Digital Solutions for Modern Businesses ✨
         </motion.div>
 
+        {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -94,8 +95,7 @@ export default function Hero() {
           style={{
             fontFamily: 'Poppins, sans-serif', fontWeight: 900,
             fontSize: 'clamp(2.5rem, 6vw, 5rem)', lineHeight: 1.1, marginBottom: '1rem',
-            background: 'linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            color: 'var(--text-primary)'
           }}
         >
           Justry Tech Solutions
@@ -144,16 +144,16 @@ export default function Hero() {
           style={{
             display: 'flex', gap: '3rem', justifyContent: 'center', flexWrap: 'wrap',
             padding: '2rem', borderRadius: '1.25rem',
-            background: 'var(--glass-bg)',
+            background: 'rgba(108,99,255,0.05)',
             border: '1px solid var(--border-color)',
             backdropFilter: 'blur(10px)'
           }}
           className="stats-container"
         >
           <StatCounter value={5} label="Projects Delivered" started={statsStarted} />
-          <div className="separator" style={{ width: '1px', background: 'var(--border-color)' }} />
+          <div className="separator" style={{ width: '1px', background: 'rgba(108,99,255,0.2)' }} />
           <StatCounter value={10} label="Happy Clients" started={statsStarted} />
-          <div className="separator" style={{ width: '1px', background: 'var(--border-color)' }} />
+          <div className="separator" style={{ width: '1px', background: 'rgba(108,99,255,0.2)' }} />
           <StatCounter value={1} label="Year of Excellence" started={statsStarted} />
         </motion.div>
       </div>

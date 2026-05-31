@@ -46,9 +46,7 @@ export default function LoadingScreen() {
             style={{
               fontSize: '2rem', fontFamily: 'Poppins, sans-serif',
               fontWeight: 800, letterSpacing: '-0.02em',
-              background: 'linear-gradient(135deg, #6c63ff, #3b82f6, #a78bfa)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              color: 'var(--text-primary)'
             }}
           >
             Justry Tech
@@ -69,7 +67,7 @@ export default function LoadingScreen() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          style={{ color: 'rgba(30,27,75,0.4)', fontSize: '0.875rem', letterSpacing: '0.1em', fontWeight: 500 }}
+          style={{ color: 'rgba(0,0,0,0.4)', fontSize: '0.875rem', letterSpacing: '0.1em', fontWeight: 500 }}
         >
           LOADING EXPERIENCE...
         </motion.p>

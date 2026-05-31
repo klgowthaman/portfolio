@@ -75,8 +75,8 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
           style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Contact</span>
-          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Contact</span>
+          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', color: 'var(--text-primary)' }}>
             Let's Build Something Together
           </h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '500px', margin: '1rem auto 0', lineHeight: 1.7 }}>
@@ -95,11 +95,11 @@ export default function Contact() {
             </p>
 
             {[
-              { icon: <Mail size={20} color="#6c63ff" />, label: 'Email', value: 'justrytechsolutions@gmail.com' },
-              { icon: <Phone size={20} color="#3b82f6" />, label: 'Phone', value: '93450 34653' },
-              { icon: <MapPin size={20} color="#a78bfa" />, label: 'Location', value: 'India' },
-              { icon: <LinkedinIcon size={20} color="#0077b5" />, label: 'LinkedIn', value: 'justry-tech-solutions-undefined-66b772403', href: 'https://www.linkedin.com/in/justry-tech-solutions-undefined-66b772403' },
-              { icon: <InstagramIcon size={20} color="#e4405f" />, label: 'Instagram', value: 'justry_tech_solutions', href: 'https://www.instagram.com/justry_tech_solutions?igsh=bTFubHcxMnY5aWV4&utm_source=qr' },
+              { icon: <Mail size={20} color="var(--text-primary)" />, label: 'Email', value: 'justrytechsolutions@gmail.com' },
+              { icon: <Phone size={20} color="var(--text-primary)" />, label: 'Phone', value: '93450 34653' },
+              { icon: <MapPin size={20} color="var(--text-primary)" />, label: 'Location', value: 'India' },
+              { icon: <LinkedinIcon size={20} color="var(--text-primary)" />, label: 'LinkedIn', value: 'justry-tech-solutions-undefined-66b772403', href: 'https://www.linkedin.com/in/justry-tech-solutions-undefined-66b772403' },
+              { icon: <InstagramIcon size={20} color="var(--text-primary)" />, label: 'Instagram', value: 'justry_tech_solutions', href: 'https://www.instagram.com/justry_tech_solutions?igsh=bTFubHcxMnY5aWV4&utm_source=qr' },
             ].map((info, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
                 <div style={{ width: '48px', height: '48px', borderRadius: '0.875rem', background: 'var(--glass-bg)', border: '1px solid var(--border-color)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.1s ease' }}>
@@ -109,15 +109,15 @@ export default function Contact() {
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', opacity: 0.7, marginBottom: '0.15rem' }}>{info.label}</div>
                   <div style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
                     {info.label === 'Email' ? (
-                      <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${info.value}`} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.1s' }} onMouseEnter={e => e.target.style.color = '#6c63ff'} onMouseLeave={e => e.target.style.color = 'inherit'}>
+                      <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${info.value}`} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'all 0.1s ease' }} onMouseEnter={e => e.target.style.textDecoration = 'underline'} onMouseLeave={e => e.target.style.textDecoration = 'none'}>
                         {info.value}
                       </a>
                     ) : info.label === 'Phone' ? (
-                      <a href={`tel:${info.value.replace(/\s+/g, '')}`} style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.1s' }} onMouseEnter={e => e.target.style.color = '#3b82f6'} onMouseLeave={e => e.target.style.color = 'inherit'}>
+                      <a href={`tel:${info.value.replace(/\s+/g, '')}`} style={{ color: 'inherit', textDecoration: 'none', transition: 'all 0.1s ease' }} onMouseEnter={e => e.target.style.textDecoration = 'underline'} onMouseLeave={e => e.target.style.textDecoration = 'none'}>
                         {info.value}
                       </a>
                     ) : (info.label === 'LinkedIn' || info.label === 'Instagram') ? (
-                      <a href={info.href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.1s' }} onMouseEnter={e => e.target.style.color = info.label === 'LinkedIn' ? '#0077b5' : '#e4405f'} onMouseLeave={e => e.target.style.color = 'inherit'}>
+                      <a href={info.href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'all 0.1s ease' }} onMouseEnter={e => e.target.style.textDecoration = 'underline'} onMouseLeave={e => e.target.style.textDecoration = 'none'}>
                         {info.value}
                       </a>
                     ) : info.value}
@@ -146,8 +146,8 @@ export default function Contact() {
                   <label style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '0.5rem', fontWeight: 600 }}>Your Name</label>
                   <input value={form.name} onChange={e => { setForm({ ...form, name: e.target.value }); setErrors({ ...errors, name: '' }) }}
                     placeholder="Enter your name" style={inputStyle('name')}
-                    onFocus={e => e.target.style.borderColor = '#6c63ff'}
-                    onBlur={e => e.target.style.borderColor = errors.name ? '#ef4444' : 'rgba(108,99,255,0.2)'}
+                    onFocus={e => e.target.style.borderColor = 'var(--text-primary)'}
+                    onBlur={e => e.target.style.borderColor = errors.name ? '#ef4444' : 'var(--border-color)'}
                   />
                   {errors.name && <span style={{ color: '#ef4444', fontSize: '0.78rem', marginTop: '0.25rem', display: 'block' }}>{errors.name}</span>}
                 </div>
@@ -155,8 +155,8 @@ export default function Contact() {
                   <label style={{ display: 'block', color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '0.5rem', fontWeight: 600 }}>Email Address</label>
                   <input value={form.email} onChange={e => { setForm({ ...form, email: e.target.value }); setErrors({ ...errors, email: '' }) }}
                     placeholder="your@email.com" type="email" style={inputStyle('email')}
-                    onFocus={e => e.target.style.borderColor = '#6c63ff'}
-                    onBlur={e => e.target.style.borderColor = errors.email ? '#ef4444' : 'rgba(108,99,255,0.2)'}
+                    onFocus={e => e.target.style.borderColor = 'var(--text-primary)'}
+                    onBlur={e => e.target.style.borderColor = errors.email ? '#ef4444' : 'var(--border-color)'}
                   />
                   {errors.email && <span style={{ color: '#ef4444', fontSize: '0.78rem', marginTop: '0.25rem', display: 'block' }}>{errors.email}</span>}
                 </div>
@@ -165,8 +165,8 @@ export default function Contact() {
                   <textarea value={form.message} onChange={e => { setForm({ ...form, message: e.target.value }); setErrors({ ...errors, message: '' }) }}
                     placeholder="Tell us about your project or idea..." rows={5}
                     style={{ ...inputStyle('message'), resize: 'vertical', minHeight: '130px' }}
-                    onFocus={e => e.target.style.borderColor = '#6c63ff'}
-                    onBlur={e => e.target.style.borderColor = errors.message ? '#ef4444' : 'rgba(108,99,255,0.2)'}
+                    onFocus={e => e.target.style.borderColor = 'var(--text-primary)'}
+                    onBlur={e => e.target.style.borderColor = errors.message ? '#ef4444' : 'var(--border-color)'}
                   />
                   {errors.message && <span style={{ color: '#ef4444', fontSize: '0.78rem', marginTop: '0.25rem', display: 'block' }}>{errors.message}</span>}
                 </div>

@@ -43,12 +43,11 @@ export default function About() {
         {/* Label */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp}
           style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>About Us</span>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>About Us</span>
           <h2 style={{
             textAlign: 'center', fontFamily: 'Poppins, sans-serif', fontWeight: 800,
             fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', marginBottom: '1.25rem',
-            background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            color: 'var(--text-primary)'
           }}>
             Who We Are
           </h2>
@@ -87,7 +86,7 @@ export default function About() {
         {/* Key Areas */}
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp}
           style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Key Areas</span>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Key Areas</span>
           <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1.75rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>What We Specialize In</h3>
         </motion.div>
 
@@ -122,7 +121,7 @@ export default function About() {
             borderRadius: '1.5rem', padding: '3rem',
           }}>
           <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-            <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Why Choose Us</span>
+            <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Why Choose Us</span>
             <h3 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 700, fontSize: '1.75rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>The Justry Advantage</h3>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1rem' }}>

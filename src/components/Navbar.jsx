@@ -63,8 +63,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
             <img src="/assets/logo.png" alt="Justry Tech" style={{ height: '40px', width: '40px', objectFit: 'cover', borderRadius: '50%' }} />
             <span style={{
               fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '1.25rem',
-              background: 'linear-gradient(135deg, var(--text-primary), var(--text-secondary))',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+              color: 'var(--text-primary)'
             }}>
               Justry Tech
             </span>
@@ -80,10 +79,17 @@ export default function Navbar({ darkMode, setDarkMode }) {
             return (
               <motion.button key={link.label}
                 onClick={() => handleNav(link.href)}
-                whileHover={{ color: darkMode ? '#ffffff' : '#000000', backgroundColor: isActive ? (darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.08)') : (darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)') }}
+                whileHover={{
+                  color: 'var(--text-primary)',
+                  backgroundColor: isActive
+                    ? (darkMode ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.1)')
+                    : (darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)')
+                }}
                 style={{
-                  background: isActive ? (darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.05)') : 'transparent',
-                  color: isActive ? (darkMode ? '#ffffff' : '#000000') : 'var(--text-secondary)',
+                  background: isActive
+                    ? (darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.06)')
+                    : 'transparent',
+                  color: isActive ? 'var(--text-primary)' : 'var(--text-secondary)',
                   border: 'none', cursor: 'pointer', padding: '0.5rem 1rem',
                   borderRadius: '0.5rem', fontFamily: 'Inter, sans-serif', fontSize: '0.9rem',
                   fontWeight: isActive ? 600 : 400,
@@ -102,9 +108,9 @@ export default function Navbar({ darkMode, setDarkMode }) {
           <button
             onClick={() => setDarkMode(!darkMode)}
             style={{
-              background: darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.04)',
-              border: '1px solid ' + (darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.08)'),
-              color: darkMode ? '#ffffff' : '#000000',
+              background: darkMode ? 'rgba(255,255,255,0.08)' : 'rgba(108,99,255,0.1)',
+              border: '1px solid ' + (darkMode ? 'rgba(255,255,255,0.1)' : 'rgba(108,99,255,0.2)'),
+              color: darkMode ? '#a78bfa' : '#6c63ff',
               borderRadius: '0.75rem', padding: '0.5rem', cursor: 'pointer',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               transition: 'all 0.1s ease'
@@ -145,7 +151,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           style={{
             background: darkMode ? 'rgba(10,10,15,0.97)' : 'rgba(248,249,255,0.97)',
             backdropFilter: 'blur(20px)',
-            borderTop: '1px solid var(--border-color)',
+            borderTop: '1px solid rgba(108,99,255,0.15)',
             padding: '1rem 2rem 2rem',
             display: 'flex', flexDirection: 'column', gap: '0.5rem'
           }}

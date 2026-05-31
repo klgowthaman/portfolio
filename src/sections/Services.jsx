@@ -46,12 +46,11 @@ export default function Services() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
           style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Services</span>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Services</span>
           <h2 style={{
             fontFamily: 'Poppins, sans-serif', fontWeight: 800,
             fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem',
-            background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)',
-            WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'
+            color: 'var(--text-primary)'
           }}>
             What We Offer
           </h2>
@@ -96,7 +95,7 @@ export default function Services() {
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
                 {svc.features.map((f, j) => (
-                  <span key={j} style={{ fontSize: '0.75rem', padding: '0.25rem 0.65rem', borderRadius: '9999px', background: `${svc.color}12`, color: svc.color, border: `1px solid ${svc.color}25`, fontWeight: 500 }}>{f}</span>
+                  <span key={j} style={{ fontSize: '0.75rem', padding: '0.25rem 0.65rem', borderRadius: '9999px', background: 'var(--border-color)', color: 'var(--text-primary)', border: '1px solid var(--border-color)', fontWeight: 500 }}>{f}</span>
                 ))}
               </div>
             </motion.div>

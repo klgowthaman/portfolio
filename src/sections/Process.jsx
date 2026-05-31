@@ -22,8 +22,8 @@ export default function Process() {
           initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8 }}
           style={{ textAlign: 'center', marginBottom: '5rem' }}
         >
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>How We Work</span>
-          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>How We Work</span>
+          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', color: 'var(--text-primary)' }}>
             Our Process
           </h2>
           <p style={{ color: 'var(--text-secondary)', maxWidth: '550px', margin: '1rem auto 0', lineHeight: 1.7 }}>
@@ -34,7 +34,7 @@ export default function Process() {
         {/* Steps */}
         <div style={{ position: 'relative' }}>
           {/* Connecting line */}
-          <div style={{ position: 'absolute', top: '2.5rem', left: '10%', right: '10%', height: '2px', background: 'linear-gradient(90deg, #6c63ff, #3b82f6, #a78bfa, #22d3ee, #f59e0b)', opacity: 0.25, borderRadius: '1px' }}
+          <div style={{ position: 'absolute', top: '2.5rem', left: '10%', right: '10%', height: '2px', background: 'var(--border-color)', opacity: 0.5, borderRadius: '1px' }}
             className="hidden-mobile" />
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '2rem' }}>

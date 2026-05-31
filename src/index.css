@@ -28,9 +28,8 @@ html {
   --bg-secondary: #f9f9ff;
   --text-primary: #000000;
   --text-secondary: rgba(0, 0, 0, 0.6);
-  --text-highlight: #000000;
   --border-color: rgba(0, 0, 0, 0.08);
-  --grid-color: rgba(0, 0, 0, 0.05);
+  --grid-color: rgba(108, 99, 255, 0.35); /* Increased for better visibility */
   --card-bg: rgba(255, 255, 255, 0.4);
   --glass-bg: rgba(255, 255, 255, 0.3);
 }
@@ -40,9 +39,8 @@ html {
   --bg-secondary: #16181d;
   --text-primary: #f8fafc;
   --text-secondary: rgba(248, 250, 252, 0.6);
-  --text-highlight: #ffffff;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --grid-color: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255,255,255,0.1);
+  --grid-color: rgba(108, 99, 255, 0.1);
   --card-bg: rgba(255, 255, 255, 0.06);
   --glass-bg: rgba(255, 255, 255, 0.05);
 }
@@ -66,10 +64,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 /* Gradient button */
@@ -110,20 +105,15 @@ body {
   font-weight: 600;
   padding: 0.75rem 2rem;
   border-radius: 0.75rem;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--text-primary);
   cursor: pointer;
   transition: all 0.1s ease;
 }
 
 .btn-outline:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: var(--text-primary);
+  background: var(--text-primary);
+  color: var(--bg-primary);
   transform: translateY(-2px);
-}
-
-.dark .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: var(--text-primary);
 }
 
 .glow {
@@ -140,7 +130,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #6c63ff;
+  background: var(--text-secondary);
   border-radius: 3px;
 }
 

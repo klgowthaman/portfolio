@@ -34,8 +34,8 @@ export default function Testimonials() {
           initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ textAlign: 'center', marginBottom: '4rem' }}
         >
-          <span style={{ color: '#6c63ff', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Testimonials</span>
-          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', background: 'linear-gradient(135deg, var(--text-primary), #6c63ff)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+          <span style={{ color: 'var(--text-primary)', fontWeight: 600, fontSize: '0.875rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>Testimonials</span>
+          <h2 style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3rem)', marginTop: '0.75rem', color: 'var(--text-primary)' }}>
             What Our Clients Say
           </h2>
         </motion.div>
@@ -75,9 +75,9 @@ export default function Testimonials() {
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
               <div style={{
                 width: '52px', height: '52px', borderRadius: '50%',
-                background: 'linear-gradient(135deg, #6c63ff, #3b82f6)',
+                background: 'var(--text-primary)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'white', fontSize: '1.1rem'
+                fontFamily: 'Poppins, sans-serif', fontWeight: 700, color: 'var(--bg-primary)', fontSize: '1.1rem'
               }}>
                 {testimonials[current].name[0]}
               </div>
@@ -91,16 +91,16 @@ export default function Testimonials() {
 
         {/* Navigation */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1.25rem', marginTop: '2.5rem' }}>
-          <button onClick={prev} style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(108,99,255,0.08)', border: '1px solid rgba(108,99,255,0.15)', cursor: 'pointer', color: '#6c63ff', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
+          <button onClick={prev} style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'var(--border-color)', border: '1px solid var(--border-color)', cursor: 'pointer', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
             <ChevronLeft size={18} />
           </button>
           <div style={{ display: 'flex', gap: '0.5rem' }}>
             {testimonials.map((_, i) => (
               <button key={i} onClick={() => setCurrent(i)}
-                style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? '#6c63ff' : 'rgba(108,99,255,0.25)', border: 'none', cursor: 'pointer', transition: 'all 0.2s ease', padding: 0 }} />
+                style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? 'var(--text-primary)' : 'var(--border-color)', border: 'none', cursor: 'pointer', transition: 'all 0.2s ease', padding: 0 }} />
             ))}
           </div>
-          <button onClick={next} style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'rgba(108,99,255,0.08)', border: '1px solid rgba(108,99,255,0.15)', cursor: 'pointer', color: '#6c63ff', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
+          <button onClick={next} style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'var(--border-color)', border: '1px solid var(--border-color)', cursor: 'pointer', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.2s' }}>
             <ChevronRight size={18} />
           </button>
         </div>
