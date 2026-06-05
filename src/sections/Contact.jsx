@@ -97,11 +97,21 @@ export default function Contact() {
             {[
               { icon: <Mail size={20} color="var(--text-primary)" />, label: 'Email', value: 'justrytechsolutions@gmail.com' },
               { icon: <Phone size={20} color="var(--text-primary)" />, label: 'Phone', value: '93450 34653' },
-              { icon: <MapPin size={20} color="var(--text-primary)" />, label: 'Location', value: 'India' },
+              {
+                icon: <MapPin size={20} color="var(--text-primary)" />,
+                label: 'Location',
+                value: (
+                  <span style={{ display: 'block', fontSize: '0.9rem', lineHeight: '1.4', fontWeight: 500 }}>
+                    Ponnampalayam, Puliampatti,<br />
+                    Erode District, Tamil Nadu – 638459,<br />
+                    India
+                  </span>
+                )
+              },
               { icon: <LinkedinIcon size={20} color="var(--text-primary)" />, label: 'LinkedIn', value: 'justry-tech-solutions-undefined-66b772403', href: 'https://www.linkedin.com/in/justry-tech-solutions-undefined-66b772403' },
               { icon: <InstagramIcon size={20} color="var(--text-primary)" />, label: 'Instagram', value: 'justry_tech_solutions', href: 'https://www.instagram.com/justry_tech_solutions?igsh=bTFubHcxMnY5aWV4&utm_source=qr' },
             ].map((info, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+              <div key={i} style={{ display: 'flex', alignItems: info.label === 'Location' ? 'flex-start' : 'center', gap: '1rem', marginBottom: '1.25rem' }}>
                 <div style={{ width: '48px', height: '48px', borderRadius: '0.875rem', background: 'var(--glass-bg)', border: '1px solid var(--border-color)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.1s ease' }}>
                   {info.icon}
                 </div>
